@@ -23,8 +23,6 @@ const connectDB = async () => {
 
 const MongoDbcluster = process.env['MongoDb']
 
-console.log("MongoDB URI:", MongoDbcluster);
-
 mongoose.connect(MongoDbcluster, {
     dbName: 'Job_Data',
     useNewUrlParser: true,
