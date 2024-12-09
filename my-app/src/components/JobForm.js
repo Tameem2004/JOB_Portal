@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function FindJobs() {
     const [jobTitle, setJobTitle] = useState('');
     const [jobDescription, setJobDescription] = useState('');
+    const [companyName, setCompanyName] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -10,6 +11,7 @@ function FindJobs() {
         const jobData = {
             Job_Title: jobTitle,
             Job_Description: jobDescription,
+            Company_Name: companyName,
         };
 
         try {
@@ -21,7 +23,6 @@ function FindJobs() {
                 body: JSON.stringify(jobData),
             });
 
-            const result = await response.json();
             if (response.ok) {
                 alert('Job Posted Successfully!');
             } else {
@@ -43,6 +44,13 @@ function FindJobs() {
                         value={jobTitle}
                         onChange={(e) => setJobTitle(e.target.value)}
                         placeholder="Job Title"
+                        className="px-4 py-2 w-64 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <input
+                        name="Company_Name"
+                        value={companyName}
+                        onChange={(e) => setCompanyName(e.target.value)}
+                        placeholder="Company Name"
                         className="px-4 py-2 w-64 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <input

@@ -41,6 +41,10 @@ const JobSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    Company_Name: {
+        type: String,
+        required: true,
+    },
     Job_Description: {
         type: String,
         required: true,

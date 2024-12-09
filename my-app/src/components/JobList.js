@@ -44,6 +44,7 @@ function FindJobs() {
               className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center"
             >
               <h2 className="text-xl font-semibold text-gray-800">{job.Job_Title}</h2>
+              <h3 className="text-xl font-semibold text-gray-800">{job.Company_Name}</h3>
               <p className="text-gray-600 text-sm">{job.Job_Description}</p>
               <button className="mt-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
                 Apply
